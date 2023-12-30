@@ -1,0 +1,67 @@
+.hover-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hover-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(32, 14, 58, 0.7); 
+    transition: background-color 0.3s ease; 
+  }
+  
+  .hover-card:hover::before {
+    background-color:rgba(32, 14, 58, 0.92); 
+  }
+
+  .hover-card .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    /* transition: opacity 0.3s ease; */
+    width: 80%;
+    transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+
+  }
+  
+  .hover-card:hover .hover-text {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+
+  }
+
+
+  .main-heading {
+    transition: opacity 0.3s ease;
+  }
+  
+  .hover-card:hover .main-heading {
+    opacity: 0;
+  }
+
+  .truncate-text {
+    max-height: 3em; 
+    overflow: hidden;
+    transition: max-height 0.3s ease; 
+  }
+  
+  .hover-card:hover .truncate-text {
+    max-height: 100%; /* Show full text on hover */
+  }
+
+  .read-more {
+    display: inline;
+    cursor: pointer;
+    color: #3498db;
+    margin-top: 5px;
+  }
+
+  .hover-card:hover .read-more {
+    display: none;
+  }
