@@ -1,8 +1,11 @@
 {
+  "homepage": "https://SUBHUAM.github.io/Portfolio",
   "name": "portfolio-new",
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -14,6 +17,7 @@
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "framer-motion": "^10.16.16",
+    "gh-pages": "^6.1.1",
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
