@@ -12,7 +12,7 @@ import {
   ListItem,
 
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { SiSpring } from "react-icons/si";
 import { FaBook } from "react-icons/fa";
 import {  IoLogoHtml5 } from "react-icons/io";
@@ -21,9 +21,20 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function Skills() {
+
+  const [render,setRender]=useState(false);
+
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+  useEffect(()=>{
+  setRender(true);
+  },[])
+
+  if(!render){
+    return ;
+  }
+  
 
   let languages = ["C++", "Java", "Javascript", "Typescript"];
   let frontEnd = [

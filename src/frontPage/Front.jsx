@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Grid, Image, GridItem, Heading, Text } from "@chakra-ui/react";
 import userPic from "../pics/profilephoto.png";
 import { motion } from "framer-motion";
@@ -8,6 +8,16 @@ import { motion } from "framer-motion";
 
 
 export default function Front() {
+  const [render,setRender]=useState(false);
+
+  useEffect(()=>{
+  setRender(true);
+  },[])
+
+  if(!render){
+    return ;
+  }
+
   return (
     <Grid
       templateAreas={`"left right"`}
@@ -34,7 +44,7 @@ export default function Front() {
           <Image
             borderRadius="full"
             boxSize={["6em", "8em", "12em"]}
-            src={userPic.src}
+            src={userPic && userPic.src}
             alt="Subhuam Tangar"
             paddingStart={["5px", "5px", "0px"]}
           />

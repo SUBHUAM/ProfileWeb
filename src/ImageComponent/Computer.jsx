@@ -1,10 +1,21 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Container, Image, Divider } from "@chakra-ui/react";
 import ComputerImage from "../pics/computerPic.png";
 import { motion } from "framer-motion";
 
 export default function Computer() {
+
+  const [render,setRender]=useState(false);
+
+  useEffect(()=>{
+  setRender(true);
+  },[])
+
+  if(!render){
+    return ;
+  }
+
   return (
     <motion.div
       whileInView={{ opacity: 1 }}
@@ -24,7 +35,7 @@ export default function Computer() {
         <Image
           htmlHeight={["auto", "auto", "350px"]}
           htmlWidth={["100%", "100%", "400px"]}
-          src={ComputerImage.src}
+          src={ComputerImage&&ComputerImage.src}
           alt="ComputerPic"
         />
         <Divider orientation="horizontal" />

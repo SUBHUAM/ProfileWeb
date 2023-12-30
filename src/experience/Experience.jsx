@@ -23,7 +23,7 @@ export default function Experience() {
       <Image
         marginTop="8%"
         h={["100px", "100px", "150px"]}
-        src={PureSoftware.src}
+        src={PureSoftware&&PureSoftware.src}
         alt="PureSoftware"
       ></Image>
     </Container>

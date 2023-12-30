@@ -9,7 +9,7 @@ import {
   Image,
   Divider,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Spotify from "../pics/music.png";
 import Keeper from "../pics/keeper.png";
 import SignUp from "../pics/signUp.jpg";
@@ -21,6 +21,17 @@ export default function Project() {
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+
+  const [render,setRender]=useState(false);
+
+
+  useEffect(()=>{
+    setRender(true);
+    },[])
+  
+    if(!render){
+      return ;
+    }
 
   return (
     <Container maxWidth="90%" marginBottom="13%">
@@ -48,7 +59,7 @@ export default function Project() {
           <Card h="300px" className="hover-card" borderRadius={"15px"}>
             <Image
               alt="spotify"
-              src={Spotify.src}
+              src={Spotify&&Spotify.src}
               objectFit="cover"
               height="100%"
               width="100%"
@@ -98,7 +109,7 @@ export default function Project() {
           <Card h="300px" className="hover-card" borderRadius={"15px"}>
             <Image
               alt="spotify"
-              src={SignUp.src}
+              src={SignUp&&SignUp.src}
               objectFit="cover"
               height="100%"
               width="100%"
@@ -149,7 +160,7 @@ export default function Project() {
           <Card h="300px" className="hover-card" borderRadius={"15px"}>
             <Image
               alt="spotify"
-              src={Keeper.src}
+              src={Keeper&&Keeper.src}
               objectFit="cover"
               height="100%"
               width="100%"
