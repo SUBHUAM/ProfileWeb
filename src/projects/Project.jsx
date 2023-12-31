@@ -16,22 +16,15 @@ import SignUp from "../pics/signUp.jpg";
 import "./styles.css";
 import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { useRouter } from 'next/navigation';
 
 export default function Project() {
+
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
 
-  const [render,setRender]=useState(false);
 
-
-  useEffect(()=>{
-    setRender(true);
-    },[])
-  
-    if(!render){
-      return ;
-    }
 
   return (
     <Container maxWidth="90%" marginBottom="13%">

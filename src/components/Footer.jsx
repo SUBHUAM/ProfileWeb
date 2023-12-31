@@ -20,6 +20,7 @@ import { FiLinkedin } from "react-icons/fi";
 import { FaHandshake } from "react-icons/fa6";
 
 export default function Footer() {
+  
   let date = new Date();
 
   return (

@@ -6,17 +6,7 @@ import userPic from "../pics/profilephoto.png";
 import { motion } from "framer-motion";
 
 
-
 export default function Front() {
-  const [render,setRender]=useState(false);
-
-  useEffect(()=>{
-  setRender(true);
-  },[])
-
-  if(!render){
-    return ;
-  }
 
   return (
     <Grid

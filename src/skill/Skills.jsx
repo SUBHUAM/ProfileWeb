@@ -22,18 +22,10 @@ import { useInView } from "react-intersection-observer";
 
 export default function Skills() {
 
-  const [render,setRender]=useState(false);
-
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
-  useEffect(()=>{
-  setRender(true);
-  },[])
-
-  if(!render){
-    return ;
-  }
+  
   
 
   let languages = ["C++", "Java", "Javascript", "Typescript"];

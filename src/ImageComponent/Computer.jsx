@@ -6,16 +6,6 @@ import { motion } from "framer-motion";
 
 export default function Computer() {
 
-  const [render,setRender]=useState(false);
-
-  useEffect(()=>{
-  setRender(true);
-  },[])
-
-  if(!render){
-    return ;
-  }
-
   return (
     <motion.div
       whileInView={{ opacity: 1 }}

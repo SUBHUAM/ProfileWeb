@@ -12,9 +12,11 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 export default function About() {
+
   const [ref, inView] = useInView({
     triggerOnce: true,
   });
+  
 
   return (
     <Container

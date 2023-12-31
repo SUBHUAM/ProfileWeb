@@ -3,6 +3,7 @@ import React from "react";
 import PureSoftware from "../pics/puresoftware.jpg";
 
 export default function Experience() {
+
   return (
     <Container maxW="79%" centerContent>
       <Heading size={["xl", "xl", "2xl"]} marginTop="12%">
