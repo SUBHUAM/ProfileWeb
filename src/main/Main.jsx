@@ -11,11 +11,7 @@ import About from '../about/About'
 import { useRouter } from 'next/navigation'
 
 export default function Main() {
-  // const router = useRouter()
 
-  // if (router.isFallback) {
-  //   return <div>Loading...</div>
-  // }
   return (
     <div>
     <TopBar />
